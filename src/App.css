@@ -1,0 +1,367 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+/* ==== CONTAINER ==== */
+.container {
+  background-color: aliceblue;
+  padding: 50px 50px;
+}
+
+/* ==== PRINTABLE SHEET ==== */
+.wrapper-sheet { 
+  font-family: 'Times New Roman', Times, serif !important;
+  border: 1px solid lightgray;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 20px 20px 250px 20px;
+  max-width: 900px;
+  margin:auto;
+  min-width: 800px;
+  background-color: white;
+}
+
+
+.wrapper-sheet #header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  font-size: 15px;
+}
+.wrapper-sheet #header img {
+  height: 100%;
+}
+.wrapper-sheet #header p {
+  text-align: right;
+}
+.wrapper-sheet #firstRow {
+  margin-top: 20px;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 140px auto 50px 150px;
+}
+.wrapper-sheet #seccondRow {
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns: 70px auto 100px 150px;
+}
+.wrapper-sheet #thirdRow {
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns: 130px auto 35px auto 130px 150px;
+}
+#firstRow h2,  #seccondRow h2, #thirdRow h2 {
+  font-weight: 400;
+  font-size: 15px;
+  margin-left: auto;
+  margin-right: 0;
+}
+#firstRow p, #seccondRow p, #thirdRow p {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 1px;
+  border-bottom: 1px solid lightgray;
+}
+
+.wrapper-sheet .content table {
+  width: 100%;
+  margin-top: 10px;
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+.wrapper-sheet .content table th {
+  background-color: black;
+  color: white;   
+}
+.wrapper-sheet .content table, tr, td, th{
+border: 1px solid black;
+border-collapse: collapse;
+height: 10px !important;
+}
+.wrapper-sheet .content td {
+  border: 1px solid black;
+  padding-top:1px;
+  padding-bottom:1px;
+}
+.content .description {
+  text-align: left;
+  padding-left: 5px;
+  width: 265px;
+}
+
+.btnPrint{
+  position:fixed;
+  right:20px;
+  bottom:70px;
+  background-color: #62CCB1;
+  color:white;
+  border:2px solid transparent;
+  display: block;
+  height: 60px;
+  width: 60px;
+  font-size: 30px;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.btnPrint:hover{
+  background-color: white;
+  color:#62CCB1;
+  
+}
+
+
+
+/* ==== PRINTABLE SHEET ==== */
+.sheet { 
+  font-family: 'Times New Roman', Times, serif !important;
+  margin:auto;
+}
+
+
+.sheet #header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  font-size: 15px;
+}
+.sheet #header img {
+  height: 100%;
+}
+.sheet #header p {
+  text-align: right;
+}
+.sheet #firstRow {
+  margin-top: 20px;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 140px auto 50px 150px;
+}
+.sheet #seccondRow {
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns: 70px auto 100px 150px;
+}
+.sheet #thirdRow {
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns: 130px auto 35px auto 130px 150px;
+}
+#firstRow h2,  #seccondRow h2, #thirdRow h2 {
+  font-weight: 400;
+  font-size: 15px;
+  margin-left: auto;
+  margin-right: 0;
+}
+#firstRow p, #seccondRow p, #thirdRow p {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 1px;
+  border-bottom: 1px solid lightgray;
+}
+
+.sheet .content table {
+  width: 100%;
+  margin-top: 10px;
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+.sheet .content table th {
+  background-color: black;
+  color: white;   
+}
+.sheet .content table, tr, td, th{
+border: 1px solid black;
+border-collapse: collapse;
+height: 10px !important;
+}
+.sheet .content td {
+  border: 1px solid black;
+  padding-top:1px;
+  padding-bottom:1px;
+}
+.content .description {
+  text-align: left;
+  padding-left: 5px;
+  width: 265px;
+  align-items: center;
+}
+
+
+iframe {
+  display:  none;
+}
+
+
+/* ========  LOGIN PAGE  ======== */
+
+.wrapper-login {
+  display: grid;
+  grid-template-columns: 50% auto;
+  width: 100%;
+  height: 100vh;
+  background-color: aliceblue;
+}
+.wrapper-login h2 {   
+  font-size: 70px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+}
+.wrapper-login p {
+  font-size: 30px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+}
+
+.wrapper-login #left {
+  display:flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  text-align: left;
+  padding: 20%;
+}
+
+.wrapper-login .codes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 5px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 200px;
+}
+.wrapper-login .codes input{ 
+  width: 50px;
+  height: 60px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: transparent;
+  font-size: 40px;
+  text-align: center;
+  font-weight: bold;
+  outline: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+}
+.wrapper-login button {
+  display: block;
+  width: 210px;
+  height: 40px;
+  color: white;
+  background-color: #62CCB1;
+  border: 1px solid transparent;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+}
+
+.wrapper-login button:hover{
+  background-color: white;
+  border: 1px solid #62CCB1;
+  color: #62CCB1;
+}
+
+.wrapper-login #right img{
+  height: 100vh;
+  margin-right: 0;
+}
+
+@media screen and (max-width:950px) {
+  .wrapper-login {
+    display: block;
+    width: 100vw !important;
+    margin: 0;
+    
+  }
+  .wrapper-login #left {
+    background-color: aliceblue;
+    text-align: center;
+    padding: 0;
+  }
+  .wrapper-login h2 { 
+    margin-top: -150px;
+    font-size: 50px;
+  }
+  .wrapper-login p { 
+    font-size: 20px;
+  }
+  .wrapper-login .codes {
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px auto;
+    width: fit-content;
+  }
+  .wrapper-login input {
+    background-color: white !important;
+  }
+  .wrapper-login button {
+    margin: 10px auto;
+  }
+  .wrapper-login img{
+    display: none;
+  }
+
+
+  .container {
+    background-color: aliceblue;
+    height: 100vh;
+  }
+  .wrapper-sheet {
+    transform:scale(0.5);
+    position: absolute; 
+    top: -37%;
+    left: -43%;
+    padding-bottom: 150px;
+  }
+
+  .btnPrint{
+    bottom:0px;
+  }
+}
