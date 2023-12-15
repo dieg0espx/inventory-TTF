@@ -54,189 +54,9 @@
   padding: 50px 50px;
 }
 
-/* ==== PRINTABLE SHEET ==== */
-.wrapper-sheet { 
-  font-family: 'Times New Roman', Times, serif !important;
-  border: 1px solid lightgray;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  padding: 20px 20px 250px 20px;
-  max-width: 900px;
-  margin:auto;
-  min-width: 800px;
-  background-color: white;
-}
-
-
-.wrapper-sheet #header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 90px;
-  font-size: 15px;
-}
-.wrapper-sheet #header img {
-  height: 100%;
-}
-.wrapper-sheet #header p {
-  text-align: right;
-}
-.wrapper-sheet #firstRow {
-  margin-top: 20px;
-  display: grid;
-  width: 100%;
-  grid-template-columns: 140px auto 50px 150px;
-}
-.wrapper-sheet #seccondRow {
-  margin-top: 5px;
-  display: grid;
-  grid-template-columns: 70px auto 100px 150px;
-}
-.wrapper-sheet #thirdRow {
-  margin-top: 5px;
-  display: grid;
-  grid-template-columns: 130px auto 35px auto 130px 150px;
-}
-#firstRow h2,  #seccondRow h2, #thirdRow h2 {
-  font-weight: 400;
-  font-size: 15px;
-  margin-left: auto;
-  margin-right: 0;
-}
-#firstRow p, #seccondRow p, #thirdRow p {
-  font-family: Arial, Helvetica, sans-serif;
-  padding-bottom: 1px;
-  border-bottom: 1px solid lightgray;
-}
-
-.wrapper-sheet .content table {
-  width: 100%;
-  margin-top: 10px;
-  border-collapse: collapse;
-  border: 1px solid black;
-}
-.wrapper-sheet .content table th {
-  background-color: black;
-  color: white;   
-}
-.wrapper-sheet .content table, tr, td, th{
-border: 1px solid black;
-border-collapse: collapse;
-height: 10px !important;
-}
-.wrapper-sheet .content td {
-  border: 1px solid black;
-  padding-top:1px;
-  padding-bottom:1px;
-}
-.content .description {
-  text-align: left;
-  padding-left: 5px;
-  width: 265px;
-}
-
-.btnPrint{
-  position:fixed;
-  right:20px;
-  bottom:70px;
-  background-color: #62CCB1;
-  color:white;
-  border:2px solid transparent;
-  display: block;
-  height: 60px;
-  width: 60px;
-  font-size: 30px;
-  border-radius: 10px;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
-
-.btnPrint:hover{
-  background-color: white;
-  color:#62CCB1;
-  
-}
-
-
-
-/* ==== PRINTABLE SHEET ==== */
-.sheet { 
-  font-family: 'Times New Roman', Times, serif !important;
-  margin:auto;
-}
-
-
-.sheet #header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 90px;
-  font-size: 15px;
-}
-.sheet #header img {
-  height: 100%;
-}
-.sheet #header p {
-  text-align: right;
-}
-.sheet #firstRow {
-  margin-top: 20px;
-  display: grid;
-  width: 100%;
-  grid-template-columns: 140px auto 50px 150px;
-}
-.sheet #seccondRow {
-  margin-top: 5px;
-  display: grid;
-  grid-template-columns: 70px auto 100px 150px;
-}
-.sheet #thirdRow {
-  margin-top: 5px;
-  display: grid;
-  grid-template-columns: 130px auto 35px auto 130px 150px;
-}
-#firstRow h2,  #seccondRow h2, #thirdRow h2 {
-  font-weight: 400;
-  font-size: 15px;
-  margin-left: auto;
-  margin-right: 0;
-}
-#firstRow p, #seccondRow p, #thirdRow p {
-  font-family: Arial, Helvetica, sans-serif;
-  padding-bottom: 1px;
-  border-bottom: 1px solid lightgray;
-}
-
-.sheet .content table {
-  width: 100%;
-  margin-top: 10px;
-  border-collapse: collapse;
-  border: 1px solid black;
-}
-.sheet .content table th {
-  background-color: black;
-  color: white;   
-}
-.sheet .content table, tr, td, th{
-border: 1px solid black;
-border-collapse: collapse;
-height: 10px !important;
-}
-.sheet .content td {
-  border: 1px solid black;
-  padding-top:1px;
-  padding-bottom:1px;
-}
-.content .description {
-  text-align: left;
-  padding-left: 5px;
-  width: 265px;
-  align-items: center;
-}
-
-
 iframe {
   display:  none;
 }
-
 
 /* ========  LOGIN PAGE  ======== */
 
@@ -353,15 +173,233 @@ iframe {
     background-color: aliceblue;
     height: 100vh;
   }
-  .wrapper-sheet {
+  /* .wrapper-sheet {
     transform:scale(0.5);
     position: absolute; 
     top: -37%;
     left: -43%;
     padding-bottom: 150px;
-  }
+  } */
 
   .btnPrint{
     bottom:0px;
   }
+ 
+
+  .wrapper-sheet {
+    transform: scale(0.5);
+    width: 190vw;
+    position: absolute; 
+    top: -37%;
+    left: -45%;    
+  }
+  .wrapper-sheet {
+    padding-bottom: 100px !important;
+  }
+  .printableSheet {
+    background-color: white !important;
+  }
+ 
+
+  .btnPrint {
+    width: 90vw;
+    height: 40px;
+    padding: 0 !important;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+
+
 }
+
+@page {
+  margin: 0cm; /* Set your desired margin values here */
+}
+
+  /* ==== PRINTABLE SHEET ==== */
+  .wrapper-sheet { 
+    font-family: 'Times New Roman', Times, serif !important;
+    background-color: white;
+    padding: 30px;
+    padding-bottom: 200px;
+    max-width: 1000px;
+    border: 1px solid lightgray;
+    margin: auto;
+  }
+  .wrapper-sheet #header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    font-size: 15px;
+  }
+  .wrapper-sheet #header img {
+    height: 100%;
+  }
+  .wrapper-sheet #header p {
+    text-align: right;
+    font-size: 13px;
+  }
+  .wrapper-sheet #firstRow {
+    margin-top: 20px;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 140px auto 50px 150px;
+  }
+  .wrapper-sheet #seccondRow {
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: 70px auto 100px 150px;
+  }
+  .wrapper-sheet #thirdRow {
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: 130px auto 35px auto 130px 150px;
+  }
+  #firstRow h2,  #seccondRow h2, #thirdRow h2 {
+    font-weight: 400;
+    font-size: 15px;
+    margin-left: auto;
+    margin-right: 0;
+  }
+  #firstRow p, #seccondRow p, #thirdRow p {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 1px;
+    border-bottom: 1px solid lightgray;
+  }
+  
+  .wrapper-sheet .content table {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+    border: 1px solid black;
+  }
+  .wrapper-sheet .content table th {
+    background-color: black;
+    color: white;   
+  }
+  .wrapper-sheet .content table, tr, td, th{
+  border: 1px solid black;
+  border-collapse: collapse;
+  height: 8px !important;
+}
+  .wrapper-sheet .content td {
+    border: 1px solid black;
+    padding-top:1px;
+    padding-bottom:1px;
+  }
+  .content .description {
+    text-align: left;
+    padding-left: 5px;
+    width: 265px;
+    font-size: 13px;
+  }
+
+  .wrapper-sheet #totWeight {
+    text-align: left;
+    margin-top: 15px;
+  }
+
+  .printableSheet {
+    padding: 20px;
+    background-color: aliceblue;
+  }
+
+  .printableSheet .btnPrint {
+    background-color: #62CCB1;
+    border: 1px solid transparent;
+    color: white;
+    padding: 12px 15px;
+    font-size: 30px;
+    border-radius: 5px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    transition: 0.3s;
+  }
+  .printableSheet .btnPrint:hover {
+    background-color: white;
+    color: #62CCB1;
+    border: 1px solid #62CCB1;
+  }
+
+
+
+  /* ======= SHEET  ========= */
+
+
+  .sheet { 
+    font-family: 'Times New Roman', Times, serif !important;
+    margin: auto;
+  }
+  .sheet #header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    font-size: 15px;
+  }
+  .sheet #header img {
+    height: 100%;
+  }
+  .sheet #header p {
+    text-align: right;
+    font-size: 13px;
+  }
+  .sheet #firstRow {
+    margin-top: 20px;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 140px auto 50px 150px;
+  }
+  .sheet #seccondRow {
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: 70px auto 100px 150px;
+  }
+  .sheet #thirdRow {
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: 130px auto 35px auto 130px 150px;
+  }
+  #firstRow h2,  #seccondRow h2, #thirdRow h2 {
+    font-weight: 400;
+    font-size: 15px;
+    margin-left: auto;
+    margin-right: 0;
+  }
+  #firstRow p, #seccondRow p, #thirdRow p {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 1px;
+    border-bottom: 1px solid lightgray;
+  }
+  
+  .sheet .content table {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+    border: 1px solid black;
+  }
+  .sheet .content table th {
+    background-color: black;
+    color: white;   
+  }
+  .sheet .content table, tr, td, th{
+  border: 1px solid black;
+  border-collapse: collapse;
+  height: 8px !important;
+}
+  .sheet .content td {
+    border: 1px solid black;
+    padding-top:1px;
+    padding-bottom:1px;
+  }
+  .content .description {
+    text-align: left;
+    padding-left: 5px;
+    width: 265px;
+    font-size: 13px;
+  }
+
+ 
